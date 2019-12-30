@@ -8,7 +8,7 @@ const searchProvinces = async searchText => {
 
   // Get matches to current text input
   let matches = provinces.filter(province => {
-    const regex = new RegExp(`^${searchText}|.`, "gi");
+    const regex = new RegExp(`^${searchText}`, "gi");
     return province.name.match(regex) || province.short.match(regex);
   });
 
